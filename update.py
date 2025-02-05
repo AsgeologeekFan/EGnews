@@ -11,7 +11,7 @@ rss_url = 'https://pubmed.ncbi.nlm.nih.gov/rss/search/12cYCaYYmd3PKH1TcODuh5Cr77
 access_token = os.getenv('GITHUB_TOKEN')
 openaiapikey = os.getenv('OPENAI_API_KEY')
 
-client = openai.OpenAI(api_key=openaiapikey)
+client = openai.OpenAI(api_key=openaiapikey, base_url="https://dashscope.aliyuncs.com/compatible-mode/v1")
 
 def extract_scores(text):
     # Use OpenAI API to get Research Score and Social Impact Score separately
