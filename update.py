@@ -16,7 +16,7 @@ client = openai.OpenAI(api_key=openaiapikey)
 def extract_scores(text):
     # Use OpenAI API to get Research Score and Social Impact Score separately
     response = client.chat.completions.create(
-        model="deepseek-chat",
+        model="qwen-plus",
         messages=[
             {"role": "system", "content": "You are an environmental science expert and researcher. You are skilled at selecting interesting/novelty research."},
             {"role": "user", "content": f"Given the text '{text}', evaluate this article with two scores:\n"
