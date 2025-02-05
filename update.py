@@ -18,7 +18,7 @@ def extract_scores(text):
     response = client.chat.completions.create(
         model="qwen-plus",
         messages=[
-            {"role": "system", "content": "You are an environmental science expert and researcher. You are skilled at selecting interesting/novelty research."},
+            {"role": "system", "content": "You are an expert and researcher in the area of geological engineering. You are skilled at selecting interesting/novelty research."},
             {"role": "user", "content": f"Given the text '{text}', evaluate this article with two scores:\n"
                                         "1. Research Score (0-100): Based on research innovation, methodological rigor, and data reliability.\n"
                                         "2. Social Impact Score (0-100): Based on public attention, policy relevance, and societal impact.\n"
