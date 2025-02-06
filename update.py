@@ -38,12 +38,12 @@ sciencedirect_titles = get_sciencedirect_title(rss_url)
 access_token = os.getenv('GITHUB_TOKEN')
 openaiapikey = os.getenv('OPENAI_API_KEY')
 
-client = openai.OpenAI(api_key=openaiapikey, base_url="https://dashscope.aliyuncs.com/compatible-mode/v1")
+client = openai.OpenAI(api_key=openaiapikey, base_url="https://api.deepseek.com")
 
 def extract_scores(text):
     # Use OpenAI API to get Research Score and Social Impact Score separately
     response = client.chat.completions.create(
-        model="qwen-plus",
+        model="deepseek-reasoner",
         messages=[
             {"role": "system", "content": "You are an expert and researcher in the area of geological engineering. You are skilled at selecting interesting/novelty research."},
             # {"role": "user", "content": f"Given the text '{text}', evaluate this article with two scores:\n"
