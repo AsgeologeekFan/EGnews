@@ -78,13 +78,13 @@ new_articles_data = []
 
 for title_data in sciencedirect_titles:
     title = title_data["title"]
-    research_score, social_impact_score = extract_scores(title_data["title"])
+    shear_score, joint_score = extract_scores(title_data["title"])
     doi = title_data["doi"]
 
     new_articles_data.append({
         "title": title,
-        #"research_score": research_score,
-        #"social_impact_score": social_impact_score,
+        "shear_score": shear_score,
+        "joint_score": joint_score,
         "doi": doi
     })
     
